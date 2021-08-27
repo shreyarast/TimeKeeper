@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Time</title>
+  <link rel="stylesheet" href="project1.css">
+  <script>
+    let a;
+    let date;
+    let time;
+    const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+    setInterval(() => {
+      a = new Date();
+      date = a.toLocaleDateString(undefined, options);
+      time = a.getHours() + ':' + a.getMinutes() + ':' + a.getSeconds();
+      document.getElementById('time').innerHTML = time + "<br>on " + date;
+    }, 1000);
+  </script>
+</head>
+
+<body>
+  <nav class="navbar">
+    <ul>
+      <li>
+        TimeKeeper
+      </li>
+      <li>
+        <a href="project1.html">Home</a>
+      </li>
+      <li>
+        <a href="About.html">About</a>
+      </li>
+      </div>
+      </div>
+  </nav>
+  <div class="div1">
+    <h1>Current time is: <span id="time"></span></h1><br>
+    <hr style="height:2px;border-width:0;background-color:rgb(24, 3, 3)"><br>
+    <p><b>We are here to show you time for different countries</b></p><br>
+    <div class="dropdown">
+    <button class="dropbtn">Time-Zone</button>
+    <div class="dropdown-content">
+      <a href="https://www.timeanddate.com/worldclock/usa/new-york" target="_blank">New York</a>
+      <a href="https://www.timeanddate.com/worldclock/uk/london"target="_blank">London</a>
+      <a href="https://www.timeanddate.com/worldclock/france/paris"target="_blank">Paris</a>
+      <a href="https://www.timeanddate.com/worldclock/united-arab-emirates/dubai"target="_blank">Dubai</a>
+      <a href="https://www.timeanddate.com/worldclock/netherlands/amsterdam"target="_blank">Amsterdam</a>
+      <a href="https://www.timeanddate.com/worldclock/spain/madrid"target="_blank">Madrid</a>
+      <a href="https://www.timeanddate.com/worldclock/hong-kong/hong-kong" target="_blank">Hong-Kong</a>
+    </div>
+  </div>
+
+  </div>
+</body>
+
+</html>
